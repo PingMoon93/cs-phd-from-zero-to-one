@@ -7,7 +7,7 @@ def load_data(path="ml-100k/u.data"):
     df = pd.read_csv(path, sep="\t", names=['user_id', 'item_id', 'rating', 'timestamp'])
     data = {}
     for row in df.itertuples(index=False):
-        if row.rating >= 4:
+        if row.rating >= 3:
             data.setdefault(row.user_id, set()).add(row.item_id)
     return data
 train_data = load_data()
