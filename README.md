@@ -15,4 +15,7 @@ Id转为Embedding的通用操作是ID → 连续整数编码 → 送入 nn.Embed
 用户编码： U = [u_token1, u_token2, ...]
 物品编码： I = [i_token1, i_token2, ...]
 打分：    score = Σ_q( max_d( u_token_q · i_token_d ) )
-## 区别：双塔模型整合了用户和物品特征，但最后是单向量匹配；Deep Retrieval是多token晚交互，不把特征混合在编码阶段，而是保留到匹配阶段再计算细粒度相似度。
+区别：双塔模型整合了用户和物品特征，但最后是单向量匹配；Deep Retrieval是多token晚交互，不把特征混合在编码阶段，而是保留到匹配阶段再计算细粒度相似度。
+## AUC
+<img width="1180" height="816" alt="image" src="https://github.com/user-attachments/assets/93289597-72b1-4d16-93a6-6d02947a3d2c" />
+
