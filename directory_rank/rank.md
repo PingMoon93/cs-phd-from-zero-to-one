@@ -22,6 +22,12 @@
 数据服务业务流：
 <img width="1760" height="1010" alt="image" src="https://github.com/user-attachments/assets/06b55fc1-a45b-4a44-afd6-0238e87d728d" />
 
+## 粗排和精排
+需要考虑两个模型的单次推理代价，粗排需要单次推理代价小，预估准确性可以不高，精排则相反；
+前期融合模型用于召回；后期融合模型用于排序；
+粗排的三塔模型：
+<img width="1294" height="728" alt="image" src="https://github.com/user-attachments/assets/74fba323-9162-4f75-868a-2000d222d126" />
+介于前期融合与后期融合之间， 交叉塔中，每次推荐，用户塔只有一个用户，只做一次推理，物品塔较大，但是近乎静态，未命中缓存时需要做推理，交叉塔包含统计数据，该数据需要更新，必须做n次推理。
 
 
 
